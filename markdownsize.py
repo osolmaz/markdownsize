@@ -9,7 +9,7 @@ parser.add_argument("output", type=str, help="Path to the output file")
 
 TWEET_SEP = "[...]"
 PARAGRAPH_SEP = "{...}"
-CHAR_LIMIT = 140
+CHAR_LIMIT = 280
 
 
 if __name__ == "__main__":
@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     if header_list:
         header = header_list[0]
-        content = content[len(header):].strip()
+        content = content[len(header) :].strip()
 
     tokens = re.split("(\[\.\.\.\]|\{\.\.\.\})", content)
     tokens = [t.strip() for t in tokens]
