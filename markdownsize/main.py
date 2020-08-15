@@ -13,6 +13,10 @@ CHAR_LIMIT = 280
 
 
 if __name__ == "__main__":
+    __main__()
+
+
+def __main__():
     args = parser.parse_args()
 
     if args.input == args.output:
